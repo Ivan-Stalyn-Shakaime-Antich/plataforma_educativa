@@ -1,0 +1,609 @@
+/* ======================
+   GOOGLE FONT
+====================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ======================
+   RESET BASE
+====================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    color:#1b2330;
+
+    /* Fondo moderno tipo educativo */
+    background:
+        radial-gradient(circle at top left, #d1fae5, transparent 40%),
+        radial-gradient(circle at top right, #dbeafe, transparent 40%),
+        radial-gradient(circle at bottom, #fef9c3, transparent 50%),
+        #f8fafc;
+}
+
+/* ======================
+   NAVBAR PRO
+====================== */
+.navbar{
+    width:92%;
+    max-width:1300px;
+    margin:20px auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 30px;
+
+    background:rgba(255,255,255,.7);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.8);
+    border-radius:25px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.08);
+
+    position:relative;
+
+}
+
+/* LOGO */
+.logo{
+    font-size:26px;
+    font-weight:800;
+
+    background:linear-gradient(90deg,#16a34a,#0ea5e9,#eab308);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+/* NAV LINKS */
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#364152;
+    font-weight:600;
+    transition:.3s;
+    position:relative;
+}
+
+nav a:hover{
+    color:#16a34a;
+}
+
+/* BOTÓN MÓVIL */
+.menu-btn{
+    display:none;
+    border:none;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+    color:#16a34a;
+}
+
+/* DARK MODE BTN */
+#darkModeBtn{
+    border:none;
+    background:transparent;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#darkModeBtn:hover{
+    transform:scale(1.15);
+}
+
+/* ======================
+   HERO PRINCIPAL
+====================== */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 30px;
+    position:relative;
+    overflow:hidden;
+
+    background-image: url("../assets/images/portal.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* HERO INDEX CON IMAGEN */
+
+.hero:not(.small){
+
+    background-image: url("../assets/images/portal.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+/* QUITAR CAPAS OSCURAS */
+
+.hero::before{
+
+    content:none;
+
+}
+
+
+
+/* CONTENIDO */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:950px;
+
+}
+
+
+
+/* TITULO */
+
+.hero h1{
+
+    font-size:68px;
+
+    line-height:1.1;
+
+    font-weight:800;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #e0f802
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+
+    margin-bottom:25px;
+
+}
+
+/* TEXTO */
+
+.hero p{
+
+    font-size:30px;
+
+    color:#e9f0f0;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* BOTONES */
+
+.hero-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.btn{
+
+    padding:16px 35px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    display:inline-block;
+
+}
+
+
+
+/* BOTON VERDE */
+
+.btn-main{
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #16a34a,
+        #22c55e
+    );
+
+
+    color:white;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(34,197,94,.35);
+
+}
+
+
+
+.btn-main:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* BOTON BLANCO AZUL */
+
+.btn-light{
+
+
+    background:white;
+
+
+    color:#0284c7;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.10);
+
+}
+
+
+
+.btn-light:hover{
+
+
+    background:#f0f9ff;
+
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* ======================
+   HERO PAGINA MODULOS
+====================== */
+
+
+.hero.small{
+
+
+    min-height:45vh;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #dcfce7,
+        #dbeafe
+    );
+
+
+}
+
+
+
+/* TITULO MODULOS */
+
+.hero.small h1{
+
+
+    background:none;
+
+
+    color:#16a34a;
+
+
+}
+
+
+
+
+/* ======================
+   ANIMACIONES
+====================== */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ======================
+   SECCIONES
+====================== */
+.section{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+/* ======================
+   GRID
+====================== */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:30px;
+}
+
+/* ======================
+   CARDS EDUCATIVAS PRO
+====================== */
+
+.card{
+
+    padding:35px;
+
+    border-radius:30px;
+
+
+    /* Fondo con color moderno */
+    background:
+    linear-gradient(
+        135deg,
+        rgba(22,163,74,0.15),
+        rgba(14,165,233,0.15)
+    );
+
+
+    backdrop-filter:blur(20px);
+
+
+    border:1px solid rgba(255,255,255,0.5);
+
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.10);
+
+
+    text-decoration:none;
+
+    color:#1e293b;
+
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Brillo animado */
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    background:
+    radial-gradient(circle,#22c55e,transparent 70%);
+
+
+    top:-40px;
+
+    right:-40px;
+
+    opacity:.5;
+
+}
+
+
+
+/* Hover */
+
+.card:hover{
+
+    transform:
+    translateY(-12px)
+    scale(1.03);
+
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.20);
+
+
+}
+
+
+
+/* Título */
+
+.card h3{
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+    position:relative;
+
+}
+
+
+
+/* Texto */
+
+.card p{
+
+    color:#475569;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    position:relative;
+
+}
+
+
+/* ======================
+   INFO SECTION
+====================== */
+.info{
+    background:linear-gradient(135deg,#16a34a,#0ea5e9,#eab308);
+    color:white;
+
+    padding:70px;
+    border-radius:35px;
+    text-align:center;
+}
+
+/* ======================
+   FOOTER
+====================== */
+.footer{
+    width:92%;
+    margin:60px auto 30px;
+    padding:30px;
+
+    text-align:center;
+    color:#64748b;
+
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(20px);
+    border-radius:20px;
+}
+
+/* ======================
+   BUSCADOR
+====================== */
+.search-box{
+    width:92%;
+    max-width:600px;
+    margin:30px auto;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px 20px;
+    border-radius:999px;
+    border:1px solid #ddd;
+    font-size:16px;
+    outline:none;
+}
+
+.search-box input:focus{
+    border-color:#16a34a;
+    box-shadow:0 0 0 4px rgba(22,163,74,.15);
+}
+
+/* ======================
+   MENU MOBILE
+====================== */
+.menu.active{
+    display:flex !important;
+    flex-direction:column;
+
+    position:absolute;
+    top:90px;
+    right:20px;
+    width:240px;
+
+    padding:25px;
+    gap:20px;
+
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(20px);
+
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:220px;
+        text-align:center;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+}
